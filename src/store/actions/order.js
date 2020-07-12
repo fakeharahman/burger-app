@@ -66,7 +66,6 @@ export const fetchOrders = (token, userId) => {
         const queryParams = '?auth=' + token + '&orderBy="userId"&equalTo="' + userId + '"'; //edit firebase rules for this to work
         axios.get('/orders.json' + queryParams)
             .then(response => {
-                console.log(response.data)
                 const orders = [];
                 for (let key in response.data) {
                     orders.push({ ...response.data[key], id: key })
