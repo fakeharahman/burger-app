@@ -1,1 +1,2 @@
-A basic commercial website to order a burger. Made with react. Hoping to complete it in a month.
+#Completed
+A basic commercial website to order a burger. I'm using react and redux for this project. 
