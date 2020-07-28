@@ -1,5 +1,5 @@
-const { default: reducer } = require("./auth")
 import * as actionTypes from '../actions/actionTypes'
+const { default: reducer } = require("./auth")
 
 
 describe('authjs reducer', () => {
