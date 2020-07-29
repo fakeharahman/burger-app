@@ -18,10 +18,12 @@ const Auth = React.lazy(() => {
 
 
 const App = (props) => {
+  const { toAutoSignin } = props
+
   useEffect(() => {
-    props.toAutoSignin()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+    toAutoSignin()
+
+  }, [toAutoSignin])
 
   let routes = (
     <Switch>

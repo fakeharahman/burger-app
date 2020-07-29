@@ -43,12 +43,13 @@ const Auth = props => {
         })
     const [isSignup, setIsSignup] = useState(true)
 
+    const { onSetAuthRedirect, buildingBurger, authRedirectPath } = props;
     useEffect(() => {
-        if (!props.buildingBurger && props.authRedirectPath !== '/') {
-            props.onSetAuthRedirect()
+        if (!buildingBurger && authRedirectPath !== '/') {
+            onSetAuthRedirect()
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+
+    }, [buildingBurger, authRedirectPath, onSetAuthRedirect])
 
 
 

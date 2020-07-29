@@ -8,11 +8,12 @@ import { connect } from 'react-redux'
 
 const Orders = props => {
 
-    useEffect(() => {
-        props.onFetchOrders(props.token, props.userId)
+    const { onFetchOrders, token, userId } = props;
 
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    useEffect(() => {
+        onFetchOrders(token, userId)
+
+    }, [onFetchOrders, token, userId])
 
 
 
